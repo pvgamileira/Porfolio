@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+20&family=Momo+Trust+Display&display=swap');
+
+
+:root {
+   --bg-body: #050505;
+   --bg-surface: #0B1116;
+   --bg-card: #161B22;
+   --color-primary: #00D4FF;
+   --color-primary-hover: #66E6FF;
+   --color-secondary: #3A506B;
+   --gradient-metallic: linear-gradient(135deg, #00D4FF 0%, #0056D2 100%);
+   --text-main: #F0F6FC;
+   --text-body: #8B949E;
+   --text-muted: #484F58;
+   --border-color: #30363D;
+   --focus-ring: rgba(0, 212, 255, 0.4);
+}
+
+body {
+   background-color: var(--bg-surface);
+   color: var(--text-body);
+   font-family: 'Jersey 20', Tahoma, Geneva, Verdana, "Momo Trust Display", sans-serif;
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
+}
+
+i {
+   color: #F0F6FC;
+   font-size: 1.3rem;
+
+}
+
+.header {
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0.5rem 1rem;
+   width: 100%;
+}
+
+.header__toggle {
+   display: flex;
+   justify-content: flex-end;
+}
+
+.header__brand .brand__logo {
+   width: 3.5rem;
+   height: 3.5rem;
+}
+
+
+
+
+#toggleTheme {
+   font-size: 1.5rem;
+   color: var(--text-main);
+}
+
+.menu {
+   display: flex;
+   align-items: center;
+   background: var(--bg-surface);
+}
+
+.menu__item {
+   width: 100%;
+}
+
+.menu--mobile {
+   width: 100vw;
+   position: fixed;
+   bottom: 0;
+   justify-content: space-between;
+   border: 1px solid var(--border-color);
+}
+
+.brand__logo {
+   border-radius: 35%;
+}
+
+.menu--mobile .menu__link {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: .5rem;
+   padding: .5rem 1rem;
+}
+
+.menu__link.active .menu__icon,
+.menu__link.active .menu__text,
+.menu__link:hover .menu__icon,
+.menu__link:hover .menu__text {
+   color: var(--color-primary);
+   font-weight: 600;
+}
+
+.menu__icon,
+.menu__text {
+   color: var(--text-body);
+}
+
+.menu__icon {
+   font-size: 1.5rem;
+}
+
+.menu__text {
+   font-size: 0.75rem;
+   margin-top: 0.25rem;
+   text-transform: uppercase;
+   font-family: 'Inter';
+}
+
+.header__nav {
+   display: none;
+}
+
+.menu--principal {
+   gap: 1rem;
+
+}
+
+@media (min-width: 768px) {
+   .header {
+      position: fixed;
+      border: 1px solid var(--border-color);
+      padding: 1rem 4rem;
+   }
+
+   .nav--mobile {
+      display: none;
+   }
+
+   .header__nav {
+      display: flex;
+   }
+
+
+   .header_nav,
+   .header__toggle {
+      min-width: 30%;
+   }
+}
+
+@media (min-width: 1024px) {
+   .header {
+      position: fixed;
+      border: 1px solid var(--border-color);
+      padding: 1rem 15rem;
+      background: var(--bg-surface);
+   }
+}

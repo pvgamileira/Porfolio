@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+20&family=Momo+Trust+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+20&family=Momo+Trust+Display&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
 
-
-:root {
+:root, :root[data-theme="dark"]{
    --bg-body: #050505;
    --bg-surface: #0B1116;
    --bg-card: #161B22;
@@ -16,6 +16,31 @@
    --focus-ring: rgba(0, 212, 255, 0.4);
 }
 
+:root[data-theme="light"] {
+   /* Fundos: Evitando o branco puro (#FFF) para reduzir o cansaço visual */
+   --bg-body: #F4F7FA;       /* Cinza azulado bem claro para o fundo geral */
+   --bg-surface: #FFFFFF;    /* Branco puro apenas para destacar áreas de conteúdo */
+   --bg-card: #F0F4F8;       /* Fundo sutil para cards, criando profundidade */
+   
+   /* Cores de Marca: Adaptadas para contraste no fundo claro */
+   --color-primary: #009BCC; /* Ciano um pouco mais escuro para dar leitura em textos/ícones */
+   --color-primary-hover: #007AA3; 
+   --color-secondary: #8B949E; /* Mantido do dark, mas agora serve bem como apoio */
+   
+   /* Gradiente: Invertido para tons mais fortes para destacar no claro */
+   --gradient-metallic: linear-gradient(135deg, #009BCC 0%, #0056D2 100%);
+   
+   /* Tipografia: Tons de cinza escuro/chumbo ao invés de preto puro */
+   --text-main: #161B22;     /* Quase preto (peguei do seu bg-card dark) */
+   --text-body: #30363D;     /* Cinza chumbo escuro para textos longos */
+   --text-muted: #6E7681;    /* Cinza médio para legendas e textos secundários */
+   
+   /* Estrutura */
+   --border-color: #D0D7DE;  /* Borda suave que delimita sem pesar */
+   --focus-ring: rgba(0, 155, 204, 0.4); /* Ajustado para o novo primary */
+}
+
+
 body {
    background-color: var(--bg-surface);
    color: var(--text-body);
@@ -26,6 +51,11 @@ a {
    text-decoration: none;
    color: inherit;
 }
+
+h1,h2,h3{
+   font-family: 'Space Grotesk', 'Jersey 20', Tahoma, Geneva, Verdana, "Momo Trust Display", sans-serif;
+}
+
 
 i {
    color: #F0F6FC;
@@ -58,6 +88,8 @@ i {
 #toggleTheme {
    font-size: 1.5rem;
    color: var(--text-main);
+   cursor: pointer;
+   transition: ease-in-out .3s;
 }
 
 .menu {
@@ -79,7 +111,14 @@ i {
 }
 
 .brand__logo {
-   border-radius: 35%;
+   width: 3.5rem;
+   height: 3.5rem;
+   display: block;
+   margin: 0 auto;
+}
+
+[data-theme="dark"] .brand__logo {
+   filter: invert(1);
 }
 
 .menu--mobile .menu__link {
@@ -124,11 +163,31 @@ i {
 
 }
 
+.menu--social{
+   gap: 1rem;
+   
+}
+
+main {
+   display: flex;
+   flex-direction: column;
+   gap: .5rem;
+   padding: 2rem 1rem;
+   text-align: center;
+   
+}
+
 @media (min-width: 768px) {
    .header {
       position: fixed;
       border: 1px solid var(--border-color);
-      padding: 1rem 4rem;
+      padding: 1rem 2rem;
+      z-index: 1000;
+   }
+
+   main{
+      padding-top: 8rem;
+      text-align: center;
    }
 
    .nav--mobile {
@@ -144,7 +203,14 @@ i {
    .header__toggle {
       min-width: 30%;
    }
+
+
+
 }
+
+
+
+
 
 @media (min-width: 1024px) {
    .header {
@@ -153,4 +219,10 @@ i {
       padding: 1rem 15rem;
       background: var(--bg-surface);
    }
+}
+
+footer a:hover{
+   color: var(--color-primary);
+   font-style: italic;
+   text-decoration: underline;
 }

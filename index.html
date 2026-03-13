@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -41,10 +41,10 @@
             </ul>
         </nav>
         <div class="header__brand">
-            <img class="brand__logo" src="./assets/images/logos/Logomain1.png" alt="Logo Pessoal Paulo Vitor">
+            <img class="brand__logo" src="./assets/images/logos/Logo.png" alt="Logo Pessoal Paulo Vitor">
         </div>
         <div class="header__toggle">
-            <i class="bi bi-sun header__icon"></i>
+            <i id="toggleTheme" class="bi bi-sun header__icon"></i>
         </div>
     </header>
     <nav class="nav--mobile">
@@ -75,7 +75,40 @@
             </li>
         </ul>
     </nav>
-    <h1>Paulo Vitor Gamileira</h1>
+    <main>
+        <div class="main__content1">
+            <h1>Resolvendo soluções para você e sua empresa de forma escalável e eficiente.</h1>
+            <p>Paulo Vitor Gamileira Alves | São Paulo - SP | Desenvolvedor Full-Stack e de projetos escaláveis para
+                pequenos negócios.</p>
+            <ul class="menu menu--social">
+                <li>
+                    <a class="menu__link" href="https://github.com/pvgamileira" target="_blank" rel="noopener noreferrer">
+                        <i class="menu__icon bi bi-github"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="menu__link" href="https://www.linkedin.com/in/paulo-vitor-gamileira-alves-b80b99254/" target="_blank" rel="noopener noreferrer">
+                        <i class="menu__icon bi bi-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="menu__link" href="https://instagram.com/pvgamileira" target="_blank" rel="noopener noreferrer">
+                        <i class="menu__icon bi bi-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+            <button class="btn btn--primary">
+                <span>Ver projetos</span>
+                <i class="menu__icon bi bi-arrow-down-right"></i>
+            </button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 <a href="https://github.com/pvgamileira">Paulo Vitor Gamileira</a>. Todos os direitos reservados.
+        </p>
+    </footer>
+    <script src="./assets/JS/main.js"></script>
+    <script src="./assets/JS/scripts.js"></script>
 </body>
 
 </html>

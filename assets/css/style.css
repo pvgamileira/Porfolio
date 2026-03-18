@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+20&family=Momo+Trust+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jersey+20&family=Momo+Trust+Display&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
 
-:root, :root[data-theme="dark"]{
+:root,
+:root[data-theme="dark"] {
    --bg-body: #050505;
    --bg-surface: #0B1116;
    --bg-card: #161B22;
@@ -18,28 +19,42 @@
 
 :root[data-theme="light"] {
    /* Fundos: Evitando o branco puro (#FFF) para reduzir o cansaço visual */
-   --bg-body: #F4F7FA;       /* Cinza azulado bem claro para o fundo geral */
-   --bg-surface: #FFFFFF;    /* Branco puro apenas para destacar áreas de conteúdo */
-   --bg-card: #F0F4F8;       /* Fundo sutil para cards, criando profundidade */
-   
+   --bg-body: #F4F7FA;
+   /* Cinza azulado bem claro para o fundo geral */
+   --bg-surface: #FFFFFF;
+   /* Branco puro apenas para destacar áreas de conteúdo */
+   --bg-card: #F0F4F8;
+   /* Fundo sutil para cards, criando profundidade */
+
    /* Cores de Marca: Adaptadas para contraste no fundo claro */
-   --color-primary: #009BCC; /* Ciano um pouco mais escuro para dar leitura em textos/ícones */
-   --color-primary-hover: #007AA3; 
-   --color-secondary: #8B949E; /* Mantido do dark, mas agora serve bem como apoio */
-   
+   --color-primary: #009BCC;
+   /* Ciano um pouco mais escuro para dar leitura em textos/ícones */
+   --color-primary-hover: #007AA3;
+   --color-secondary: #8B949E;
+   /* Mantido do dark, mas agora serve bem como apoio */
+
    /* Gradiente: Invertido para tons mais fortes para destacar no claro */
    --gradient-metallic: linear-gradient(135deg, #009BCC 0%, #0056D2 100%);
-   
+
    /* Tipografia: Tons de cinza escuro/chumbo ao invés de preto puro */
-   --text-main: #161B22;     /* Quase preto (peguei do seu bg-card dark) */
-   --text-body: #30363D;     /* Cinza chumbo escuro para textos longos */
-   --text-muted: #6E7681;    /* Cinza médio para legendas e textos secundários */
-   
+   --text-main: #161B22;
+   /* Quase preto (peguei do seu bg-card dark) */
+   --text-body: #30363D;
+   /* Cinza chumbo escuro para textos longos */
+   --text-muted: #6E7681;
+   /* Cinza médio para legendas e textos secundários */
+
    /* Estrutura */
-   --border-color: #D0D7DE;  /* Borda suave que delimita sem pesar */
-   --focus-ring: rgba(0, 155, 204, 0.4); /* Ajustado para o novo primary */
+   --border-color: #D0D7DE;
+   /* Borda suave que delimita sem pesar */
+   --focus-ring: rgba(0, 155, 204, 0.4);
+   /* Ajustado para o novo primary */
 }
 
+
+html {
+   scroll-behavior: smooth;
+}
 
 body {
    background-color: var(--bg-surface);
@@ -52,15 +67,34 @@ a {
    color: inherit;
 }
 
-h1,h2,h3{
-   font-family: 'Space Grotesk', 'Jersey 20', Tahoma, Geneva, Verdana, "Momo Trust Display", sans-serif;
+a:hover {
+   color: var(--color-primary);
+   font-weight: 600;
 }
 
-
 i {
-   color: #F0F6FC;
-   font-size: 1.3rem;
+   color: var(--text-main);
+}
 
+h1 {
+   font-size: 1.875rem;
+   color: var(--text-main);
+   font-weight: 200;
+}
+
+h1,
+h2,
+h3 {
+   font-family: 'Space Grotesk', 'Jersey 20', Tahoma, Geneva, Verdana, "Momo Trust Display", sans-serif;
+   text-transform: uppercase;
+   color: var(--text-main);
+   font-weight: 200;
+}
+
+p {
+   font-size: 1.25rem;
+   text-align: justify;
+   justify-content: center;
 }
 
 .header {
@@ -163,9 +197,36 @@ i {
 
 }
 
-.menu--social{
+.menu--social {
    gap: 1rem;
-   
+
+}
+
+.btn {
+   display: flex;
+   gap: 0.625rem;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   background: transparent;
+   border-radius: 3.125rem;
+   padding: 0.875rem 1rem;
+
+}
+
+.btn span,
+btn i {
+   font-size: 1.25rem;
+   text-transform: uppercase;
+   gap: .25rem;
+}
+
+.btn--primary span {
+   color: var(--color-primary);
+}
+
+.btn--primary {
+   border: 1px solid var(--color-primary);
 }
 
 main {
@@ -174,8 +235,139 @@ main {
    gap: .5rem;
    padding: 2rem 1rem;
    text-align: center;
-   
+
 }
+
+.main__content1 {
+   display: flex;
+   flex-direction: column;
+   gap: 1.5rem;
+   padding: 0 1rem;
+   max-width: 800px;
+   margin: 0 auto;
+}
+
+
+
+.skills {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background: var(--bg-card);
+   width: 90%;
+   max-width: 800px;
+   margin: 4rem auto;
+   padding: 3rem 2rem;
+   border-radius: 16px;
+   border: 1px solid var(--border-color);
+   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills:hover {
+   transform: translateY(-8px);
+   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 15px var(--focus-ring);
+}
+
+.skills h2 {
+   text-transform: none;
+}
+
+.skills__list {
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: space-between;
+   gap: 1.5rem;
+   margin-top: 2rem;
+}
+
+.skills__item {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: .5rem;
+   font-size: 1rem;
+}
+
+.skills__logo {
+   width: 3.5rem;
+   height: 3.5rem;
+   object-fit: contain;
+}
+
+footer p {
+   font-size: .875rem;
+   text-align: center;
+   margin-bottom: 5rem;
+   padding: 0 1rem;
+}
+
+
+.project__card {
+   border: 1px solid var(--border-color);
+   border-radius: 2rem;
+   overflow: hidden;
+   width: 90%;
+   max-width: 800px;
+   margin: 0 auto 2rem auto;
+}
+
+.card-header {
+   width: 100%;
+   padding: 2rem;
+   background-color: var(--color-secondary);
+   color: var(--text-main);
+   text-align: center;
+   font-size: 1.25rem;
+   font-weight: 400;
+   font-family: inherit;
+   border: none;
+   cursor: pointer;
+   transition: background-color 0.3s;
+}
+
+.card-header:hover {
+   background-color: var(--color-primary);
+   color: var(--text-main);
+}
+
+.project__item {
+   max-height: 0;
+   overflow: hidden;
+   transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+   padding: 0 2rem;
+}
+
+.project__item.open {
+   max-height: 2000px;
+   /* Ajuste conforme necessário */
+   padding: 2rem;
+}
+
+.project__image {
+   max-width: 100%;
+   height: auto;
+   display: block;
+   margin: 0 auto 2rem;
+   border-radius: 2rem;
+}
+
+.project__title {
+   margin-top: 0;
+   margin-bottom: 8px;
+   font-size: 20px;
+}
+
+.project__description {
+   margin: 0;
+   line-height: 1.5;
+   color: var(--text-muted);
+}
+
+.projects h2 {
+   text-align: center;
+}
+
 
 @media (min-width: 768px) {
    .header {
@@ -185,7 +377,7 @@ main {
       z-index: 1000;
    }
 
-   main{
+   main {
       padding-top: 8rem;
       text-align: center;
    }
@@ -204,13 +396,27 @@ main {
       min-width: 30%;
    }
 
+   .menu--principal {
+      gap: 2rem;
+   }
 
+   .main__content1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
 
+   }
+
+   main h1,
+   main p,
+   main a {
+      text-align: center;
+      align-items: center;
+   }
+
+  
 }
-
-
-
-
 
 @media (min-width: 1024px) {
    .header {
@@ -221,7 +427,7 @@ main {
    }
 }
 
-footer a:hover{
+footer a:hover {
    color: var(--color-primary);
    font-style: italic;
    text-decoration: underline;

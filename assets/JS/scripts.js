@@ -16,3 +16,9 @@ function changeTheme() {
 
 
 toggleTheme.addEventListener('click', changeTheme);
+
+
+const toggleCard = (botao) => {
+    const card = botao.nextElementSibling;
+    card.classList.toggle('open');
+}

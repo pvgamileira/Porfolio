@@ -100,14 +100,14 @@
                     </a>
                 </li>
             </ul>
-            <button class="btn btn--primary" href="#projetos">
+            <button class="btn btn--primary" onclick="document.getElementById('projetos').scrollIntoView({ behavior: 'smooth' })">
                 <span>Ver projetos</span>
                 <i class="menu__icon bi bi-arrow-down-right"></i>
             </button>
         </div>
     </main>
     <section class="skills">
-        <h2>Meu conhecimento em linguagens de programção são em: </h2>
+        <h2>Essas são algumas de minhas skills: </h2>
         <ul class="skills__list">
             <li class="skills__item">
                 <img class="skills_logo"
@@ -138,6 +138,11 @@
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3" />
                 CSS3
             </li>
+            <li class="skills__item">
+                <img 
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" alt="SQL" class="skills__logo">
+                MS SQL Server
+            </li>
 
         </ul>
     </section>
@@ -153,15 +158,29 @@
                 <h3 class="project__title">Projeto Pokedex</h3>
                 <p class="project__description">Meu projeto de pokedex feito em HTML, CSS e JavaScript. Foi um projeto
                     que me fez
-                    pensar realmente que tenho capacidade de desenvolver, foi um divisor de águas, consegui aplicar
-                    minha lógica e conhecimento
-                    e tive aprendizados incríveis de API Rest e HTTP protocol.
+                    pensar realmente que tenho capacidade de desenvolver, foi um divisor de águas, além de ser minha
+                    primeira aplicação com API Rest, consegui aplicar minha lógica e conhecimento
+                    e tive aprendizados incríveis da própria API Rest e HTTP protocol.
                 </p>
             </div>
 
         </div>
     </section>
+    <section class="about__me" id="sobre">
+        <h2>Sobre mim</h2>
+        <p>Meu nome é Paulo Vitor Gamileira e moro na região central de São Paulo - SP, tenho 19 anos e tenho o sonho
+            de me tornar um desenvolvedor full stack especializado em criar soluções inovadoras e eficientes.
+            Desejo no futuro me tornar Tech Lead e liderar equipes de desenvolvimento, contribuindo para projetos desafiadores e impactantes.
+            Nessa jornada, em meio ao desafio de correr contra o tempo, encontrei felicidade e paixão em programar e conseguir 
+            criar soluções para mim e para as pessoas ao meu redor, e isso me motiva a continuar aprendendo e crescendo como desenvolvedor e pessoa.
+              
+        </p>
+         <i>"O impossível é só questão de opinião"</i>
+    </section>
     <footer>
+        <div>
+
+        </div>
         <p>&copy; 2026 <a href="https://github.com/pvgamileira">Paulo Vitor Gamileira</a>. Todos os direitos reservados.
         </p>
     </footer>

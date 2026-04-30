@@ -19,6 +19,20 @@ toggleTheme.addEventListener('click', changeTheme);
 
 
 const toggleCard = (botao) => {
+
     const card = botao.nextElementSibling;
-    card.classList.toggle('open');
-}
+    
+
+    const isOpen = card.classList.toggle('open');
+
+    if (isOpen) {
+        
+        const projectCard = botao.closest('.project__card');
+        
+        
+        projectCard.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'center'     
+        });
+    }
+};

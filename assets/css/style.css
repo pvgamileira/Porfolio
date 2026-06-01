@@ -442,3 +442,58 @@ footer a:hover {
    font-style: italic;
    text-decoration: underline;
 }
+
+/* Carrossel Principal (Rola os Cards) */
+.projects-carousel {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto; /* Permite rolar na horizontal */
+    scroll-snap-type: x mandatory; /* Efeito magnético obrigatório no eixo X */
+    padding: 1rem 0 2rem 0;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    /* Oculta a barra de rolagem nativa para um visual mais limpo */
+    scrollbar-width: none; 
+}
+.projects-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+/* O Card do Projeto */
+.project-card {
+    min-width: 100%; /* Faz cada card ocupar o espaço inteiro, forçando a passar 1 por 1 */
+    scroll-snap-align: center; /* Trava o card bem no centro da tela */
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 2rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Carrossel de Imagens (Rola as fotos dentro do card) */
+.images-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+.images-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+/* As imagens de dentro do carrossel */
+.images-carousel img,
+.images-carousel video {
+    min-width: 100%; /* Cada imagem ocupa 100% da largura do card */
+    height: 300px; /* Defina uma altura fixa para todas as imagens ficarem iguais */
+    object-fit: cover; /* Corta a imagem bonitinha sem distorcer */
+    scroll-snap-align: start;
+}
+
+/* Container dos textos */
+.project-info {
+    padding: 2rem;
+    text-align: left;
+}

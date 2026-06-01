@@ -100,7 +100,8 @@
                     </a>
                 </li>
             </ul>
-            <button class="btn btn--primary" onclick="document.getElementById('projetos').scrollIntoView({ behavior: 'smooth' })">
+            <button class="btn btn--primary"
+                onclick="document.getElementById('projetos').scrollIntoView({ behavior: 'smooth' })">
                 <span>Ver projetos</span>
                 <i class="menu__icon bi bi-arrow-down-right"></i>
             </button>
@@ -139,8 +140,8 @@
                 CSS3
             </li>
             <li class="skills__item">
-                <img 
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" alt="SQL" class="skills__logo">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg"
+                    alt="SQL" class="skills__logo">
                 MS SQL Server
             </li>
 
@@ -148,20 +149,41 @@
     </section>
     <section class="projects" id="projetos">
         <h2>Projetos</h2>
-        <div class="project__card">
-            <button class="card-header" onclick="toggleCard(this)">
-                Projeto Pokedex
-            </button>
-            <div class="project__item">
-                <img class="project__image" src="./assets/images/projects/ProjetoPokedex/Pokedex/PokedexFeita.png"
-                    alt="Projeto Pokedex">
-                <h3 class="project__title">Projeto Pokedex</h3>
-                <p class="project__description">Meu projeto de pokedex feito em HTML, CSS e JavaScript. Foi um projeto
-                    que me fez
-                    pensar realmente que tenho capacidade de desenvolver, foi um divisor de águas, além de ser minha
-                    primeira aplicação com API Rest, consegui aplicar minha lógica e conhecimento
-                    e tive aprendizados incríveis da própria API Rest e HTTP protocol.
-                </p>
+
+        <div class="projects-carousel">
+
+            <div class="project-card">
+                <div class="images-carousel">
+                    <img src="./assets/images/projects/ProjetoPokedex/Pokedex/PokedexFeita.png" alt="Pokédex Feita">
+                    <video muted alt="Vídeo da Pokédex" controls>
+                        <source src="./assets/images/projects/ProjetoPokedex/Pokedex/0601.mp4" type="video/mp4">
+                        Seu navegador não suporta o elemento de vídeo.
+                    </video>
+                    <img src="./assets/images/projects/ProjetoPokedex/Pokedex/CodePokedexCloneHTML.png"
+                        alt="Código HTML da Pokédex">
+                    <img src="./assets/images/projects/ProjetoPokedex/Pokedex/CodeAPIDeclaration.png"
+                        alt="Código API da Pokédex">
+                </div>
+
+                <div class="project-info">
+                    <h3 class="project__title">Projeto Pokedex</h3>
+                    <p class="project__description">
+                        Meu projeto de pokedex feito em HTML, CSS e JavaScript. Foi um projeto que me fez pensar
+                        realmente que tenho capacidade de desenvolver, foi um divisor de águas, além de ser minha
+                        primeira aplicação com API Rest...
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="images-carousel">
+                    <img src="caminho/para/imagem1.png" alt="Projeto 2">
+                </div>
+                <div class="project-info">
+                    <h3 class="project__title">EduTrack-Ai (Exemplo)</h3>
+                    <p class="project__description">Descrição detalhada deste projeto incrível que você vai adicionar
+                        aqui.</p>
+                </div>
             </div>
 
         </div>
@@ -170,12 +192,15 @@
         <h2>Sobre mim</h2>
         <p>Meu nome é Paulo Vitor Gamileira e moro na região central de São Paulo - SP, tenho 19 anos e tenho o sonho
             de me tornar um desenvolvedor full stack especializado em criar soluções inovadoras e eficientes.
-            Desejo no futuro me tornar Tech Lead e liderar equipes de desenvolvimento, contribuindo para projetos desafiadores e impactantes.
-            Nessa jornada, em meio ao desafio de correr contra o tempo, encontrei felicidade e paixão em programar e conseguir 
-            criar soluções para mim e para as pessoas ao meu redor, e isso me motiva a continuar aprendendo e crescendo como desenvolvedor e pessoa.
-              
+            Desejo no futuro me tornar Tech Lead e liderar equipes de desenvolvimento, contribuindo para projetos
+            desafiadores e impactantes.
+            Nessa jornada, em meio ao desafio de correr contra o tempo, encontrei felicidade e paixão em programar e
+            conseguir
+            criar soluções para mim e para as pessoas ao meu redor, e isso me motiva a continuar aprendendo e crescendo
+            como desenvolvedor e pessoa.
+
         </p>
-         <i>"O impossível é só questão de opinião"</i>
+        <i>"O impossível é só questão de opinião"</i>
     </section>
     <footer>
         <div>
